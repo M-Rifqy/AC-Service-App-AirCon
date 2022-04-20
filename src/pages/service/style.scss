@@ -1,0 +1,77 @@
+@import "~bootstrap/scss/bootstrap";
+
+.s-container {
+    margin-top: 100px;
+
+    .service-header {
+
+         .s-h-2 {
+            width: 100%; 
+            border-bottom: 1px solid #000; 
+            line-height: 0.1em;
+            margin: 10px 0 20px; 
+            padding-bottom: 10px;
+         }
+    
+          .s-h-2 span { 
+            background-color: #f2f4f5; 
+            padding:0 10px; 
+        }
+        
+        .s-h-1 {
+            color: #000;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 20px;
+        }
+        
+        .s-h-2 {
+            color: #000;
+            font-family: 'play', sans-serif;
+        }
+        
+        .s-h-3 {
+            color: #38373c;
+            font-family: 'play', sans-serif;
+        }
+    }
+
+    .s-col {
+        margin-bottom: 20px;
+
+        .item {
+            
+        .s-container {
+    
+            .s-img {
+                height: 180px;
+            }
+
+            .s-title {
+                font-family: 'Orbitron', sans-serif;
+                font-size: 18px;
+                color: #000;
+            }
+
+            .s-text {
+                font-family: 'play', sans-serif;
+                font-size: 15px;
+                color: #38373c;
+            }
+
+            .s-btn {
+                background-color: #000;
+                color: #ffffff;
+                border: solid #ffffff 1px;
+                transition: 0.5s;
+                width: 100%;
+            }
+
+            .btn:hover {
+                background-color: #ffffff;
+                border: solid #000 1px;
+                color: #000;
+            }
+        }
+        }
+    }
+}

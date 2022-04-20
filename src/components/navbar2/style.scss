@@ -1,0 +1,85 @@
+@import "~bootstrap/scss/bootstrap";
+
+.navbar-2 {
+  z-index: 9999 !important;
+  padding: 0px 0px !important;
+  background-color: rgb(27, 24, 24) !important;
+
+  .container-2 {
+    padding: 0px !important;
+  
+
+  .brand-2 {
+    margin-left: 5px;
+  }
+
+  .brand-2 span {
+    color: #ffffff !important;
+    font-family: 'Orbitron', sans-serif !important;
+    position: relative;
+  }
+
+  .brand-2 img {
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+    height: 50px;
+    width: 50px;
+  }
+  
+  .toggleCustom-2 {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .menu-icon-2 {
+    color: #ffffff !important;
+    font-size: 30px !important;
+  }
+    
+  .navItem-2 {
+    color: #ffffff !important;
+    font-family: 'play', sans-serif !important;
+    font-size: 16px !important;
+  }
+    
+  .navItem-2:hover {
+    color: #ffffff46 !important;
+  }
+
+  .btn-kontener-2 {
+
+    .login-btn-2 {
+      padding: 5px 10px;
+      background-color: #ffffff !important;
+      border: 1px solid #ffffff !important;
+      font-family: 'play', sans-serif !important;
+      color: #000  !important;
+      border-radius: 10px;
+      font-size: 16px !important;
+      box-shadow: none;
+    }
+
+    .login-btn-2:hover {
+      background-color:  #e6e6e6 !important;
+      border: 1px solid #e6e6e6 !important;
+      color: #000 !important;
+    }
+  
+    .book-btn-2 {
+      padding: 5px 30px;
+      background-color: gold !important;
+      border: 1px solid gold !important;
+      font-family: 'play', sans-serif !important;
+      color: #000  !important;
+      border-radius: 10px;
+      font-size: 16px !important;
+      box-shadow: none;
+    }
+
+    .book-btn-2:hover {
+      background-color: #e6c300 !important;
+      border: 1px solid #ccad00 !important;
+    }
+   }
+  }
+ }

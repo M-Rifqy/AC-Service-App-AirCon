@@ -1,0 +1,39 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "full_name": "Muhammad Rifqy",
+      "email": "2ndrifqy@gmail.com",
+      "address": "Jl.Jalan",
+      "phone_number": "+62 895-1220-3595",
+      "time": "4/19/2020",
+      "message": "AC kebakar"
+    },
+    {
+      "id": 2,
+      "full_name": "Nikodimus Raditia",
+      "email": "niko@gmail.com",
+      "address": "Jl.Buntu",
+      "phone_number": "+62 000-0000-0000",
+      "time": "4/19/2020",
+      "message": "Cuci AC"
+    },
+    {
+      "full_name": "Santoso",
+      "email": "santoso@gmail.com",
+      "address": "Jl.Raya",
+      "phone_number": "+62 888-8888-8888",
+      "time": "4/19/2020",
+      "message": "Bongkar pasang AC",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "username":"Rifqy",
+      "email":"2ndrifqy@gmail.com",
+      "password":"4321S1234lol",
+      "id":1
+    }
+  ]
+}

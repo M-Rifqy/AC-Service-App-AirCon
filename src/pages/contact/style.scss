@@ -1,0 +1,108 @@
+@import "~bootstrap/scss/bootstrap";
+
+.c-container {
+    margin-top: 120px;
+
+    .c-sub-container {
+
+        .c-title {
+            width: 100%; 
+            text-align: center; 
+            border-bottom: 1px solid #000; 
+            line-height: 0.1em;
+            margin: 10px 0 20px; 
+            padding-bottom: 10px;
+            font-family: 'Play', sans-serif;
+        }
+
+        .c-title span {
+            background-color: #f2f4f5; 
+            padding:0 10px; 
+        }
+    
+        .c-sub-title {
+            font-family: 'Play', sans-serif;
+            color: #38373c;
+            text-align: center;
+        }
+    }
+
+    .c-img {
+
+        width: 100%;
+        height: 330px;
+        border-radius: 10px;
+        box-shadow: -11px 10px 34px -3px rgba(191,191,191,1);
+        transition: 1s;
+    }
+
+    .c-sub {
+        margin-bottom: 30px;
+
+        .c-sub-icon {
+            color: #000;
+            font-size: 25px;
+            position: relative;
+            border: 2px solid #38373c;
+            border-radius: 10px; 
+            padding: 0px 10px 10px 10px;
+        }
+
+        .c-sub-text {
+            position: absolute;
+            font-family: 'Play', sans-serif;
+            font-size: 18px;
+            margin-left: 10px;
+            color: #000;
+
+            .c-text-nolink {
+                position: absolute;
+                top: 18px;
+                color: #38373c;
+            }
+
+            .c-text {
+                position: absolute;
+                top: 18px;
+                color: #38373c;
+            }
+
+            .c-text:hover {
+                color: #38373ca0;
+            }
+        }
+    }
+
+    .sosmed {
+        margin-left: 60%;
+        margin-top: 40px;
+
+        .sosmed-icon {
+            color: #000;
+            font-size: 20px;
+            position: relative;
+            border: 2px solid #38373c;
+            border-radius: 10px; 
+            padding: 5px 10px 10px 10px;
+        }
+
+        .sosmed-title {
+            position: absolute;
+            font-family: 'Play', sans-serif;
+            font-size: 18px;
+            margin-left: 10px;
+            color: #000;
+
+            .sosmed-text {
+                position: absolute;
+                color: #000;
+                font-size: 20px;
+            }
+
+            .sosmed-text:hover {
+                color: rgba(0, 0, 0, 0.614);
+            }
+        }
+    }
+
+}

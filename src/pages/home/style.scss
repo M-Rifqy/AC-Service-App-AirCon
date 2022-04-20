@@ -1,0 +1,99 @@
+@import "~bootstrap/scss/bootstrap";
+
+::-webkit-scrollbar-track {
+    background-color: #212121;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(211, 211, 211);
+    border-radius: 10px;
+}
+
+.c-item .ac {
+    min-height: 100vh;
+}
+
+.c-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-backdrop-size: cover !important;
+    background-size: cover; 
+}
+
+.c-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.7;
+}
+
+.c-caption {
+    bottom: 200px !important;
+}
+
+.c-caption .octagon {
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+    height: 100px !important;
+    width: 100px !important;
+
+}
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .octagon {
+//     animation: octagon-spin infinite 20s linear;
+//   }
+// }
+
+// @keyframes octagon-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+.c-caption h1 {
+    color: #ffffff !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 50px;
+}
+
+.c-caption p {
+    color: #ffffff !important;
+    font-family: 'Play', sans-serif !important;
+    font-size: 25px;
+    margin-top: -20px;
+}
+
+.slider-btn .tombol {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    font-family: 'Play', sans-serif !important;
+    font-size: 18px;
+    margin: 0px 10px 0px 10px;
+    border: solid rgba(240, 240, 240, 0.486) 2px;
+    border-radius: 10px !important;
+}
+
+.slider-btn .tombol:hover {
+    background-color: #ffffff !important;
+    border: solid #ffffff 1px !important;
+    color: #000000 !important;
+    box-shadow: 5px 5px 50px 5px #808080;
+}
+
+.tombol-arrow {
+    font-size: 25px;
+}

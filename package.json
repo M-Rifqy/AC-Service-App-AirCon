@@ -6,13 +6,26 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.1",
+    "bootstrap": "^5.1.3",
+    "concurrently": "^7.1.0",
+    "formik": "^2.2.9",
+    "json-server": "^0.17.0",
+    "json-server-auth": "^2.1.0",
+    "node-sass": "^7.0.1",
     "react": "^18.0.0",
+    "react-bootstrap": "^2.2.2",
     "react-dom": "^18.0.0",
+    "react-icons": "^4.3.1",
+    "react-owl-carousel": "^2.3.3",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.4"
+    "reactstrap": "^9.0.2",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently --kill-others \"react-scripts start\" \"npx json-server db.json -m ./node_modules/json-server-auth --port 8080\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

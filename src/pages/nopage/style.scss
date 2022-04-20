@@ -1,0 +1,38 @@
+@import "~bootstrap/scss/bootstrap";
+
+.lost {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-family: 'montserrat', sans-serif;
+    color: #343434;
+
+    .lost-h1 {
+        font-size: 160px;
+        margin: 0;
+        font-weight: 900;
+        letter-spacing: 20px;
+        background: url('../../materials/bg2.gif') center no-repeat;
+        -webkit-text-fill-color: transparent !important;
+        -webkit-background-clip: text !important;
+        background-clip: text;
+    }
+
+    .lost-btn {
+        background-color: transparent !important;
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 10px;
+        font-family: 'Play', sans-serif;
+        transition: 0.5s;
+    }
+
+    .lost-btn:hover {
+        border: 1px solid #000;
+        border-radius: 10px;
+        background-color: #000 !important;
+    }
+}
+

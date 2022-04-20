@@ -1,0 +1,78 @@
+@import "~bootstrap/scss/bootstrap";
+
+.form-page {
+  background-image: url('../../materials/bg.gif');
+  height: 950px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .form-container {
+    margin: 0px auto;
+    padding: 50px 30px 10px;
+    max-width: 580px;
+    background-color: #ffffffbf;
+    border-radius: 10px;
+    position: relative;
+    top: 70px;
+    margin-bottom: 200px !important;
+
+    .f-error {
+      color: #d93025;
+    }
+
+    .form-control {
+      background-color: transparent !important;
+      border: none;
+      border-radius: 0px;
+      border-bottom: 1px solid #ccccccd7;
+      outline: none;
+      font-family: 'Play', sans-serif;
+      color: #000;
+      margin: 15px 0 3px;
+      transition: 0.3s;
+
+      &:focus{
+          box-shadow: none;
+      }
+    }
+
+    .form-control:focus {
+      border-bottom: 1px solid #000;
+      background-color: transparent !important;
+    }
+
+    .f-h1 {
+      text-align: center;
+      font-family: 'Play', sans-serif;
+      color: #000;
+    }
+
+    .f-label {
+      font-family: 'Play', sans-serif;
+      color: #000;
+    }
+
+    .f-btn {
+      font-family: 'Play', sans-serif;
+      margin: 15px 0px;
+      width: 100%;
+      border-radius: 5px;
+      text-align: center !important;
+      background-color: #000;
+      border: 1px solid #000;
+      transition: 0.5s;
+    }
+
+    .f-btn:hover {
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    .f-p {
+      font-size: 15px;
+      font-family: 'Play', sans-serif;
+      color: #000;
+    }
+  }
+}

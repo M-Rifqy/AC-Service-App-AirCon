@@ -1,0 +1,121 @@
+@import "~bootstrap/scss/bootstrap";
+
+.about-container {
+    margin-top: 100px;
+
+    .about-img {
+        height: 380px;
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 50px;
+        box-shadow: -11px 10px 34px -3px rgba(191,191,191,1);
+    }
+
+    .about-header {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 15px;
+        color: #000;
+    }
+
+    .about-header img {
+        height: 45px;
+    }
+
+    .about-h1 {
+        color: #38373c;
+        font-family: 'play', sans-serif;
+        text-align: left !important;
+    }
+
+    .about-p {
+        color: #38373c;
+        font-family: 'play', sans-serif;
+        margin-top: 10px;
+    }
+
+    .about-signature {
+        color: #000;
+        font-family: 'Mea Culpa', cursive;
+        font-size: 40px;
+        float: left;
+        margin-right: 20px;
+    }
+
+    .ceo h4 {
+        color: #000;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .ceo p {
+        color: #000;
+        font-family: 'play', sans-serif;
+    }
+}
+
+.choose-container {
+
+    .choose-h1 {
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid #000; 
+        line-height: 0.1em;
+        margin: 10px 0 20px; 
+        color: #000;
+        font-family: 'Orbitron', sans-serif;
+        padding-bottom: 10px;
+     }
+
+     .choose-h1 span { 
+        background-color: #f2f4f5; 
+        padding:0 10px; 
+    }
+    
+    .choose p {
+        color: #000;
+        font-family: 'play', sans-serif;
+    }
+
+    .choose-item {
+        background-color: #f2f4f5;
+        transition: 0.5s;
+    }
+    
+    .choose-item .icon {
+        color: #000;
+        font-size: 50px;
+    }
+    
+    .choose-item h4 {
+        font-family: 'play', sans-serif;
+        color: #38373c;
+    }
+
+    .choose-item p {
+        color: #38373c;
+        font-family: 'play', sans-serif;
+    }
+}
+
+.testimonial {
+    border: 1px solid #e2e7e9;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+    .testimonial-bg {
+        background-color: #e1e1e1 !important;
+        height: 300px !important;
+    }
+    
+    .testimonial-caption {
+        bottom: 30px !important;
+
+        .testimonial-h4 {
+            font-family: 'Lucida Console', monospace;
+        }
+
+        .testimonial-p {
+            margin-top: 10px;
+            font-family: 'Play', sans-serif;
+        }
+    }
+}
