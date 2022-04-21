@@ -12,7 +12,7 @@ import NotFound from './pages/nopage';
 import {BrowserRouter, Route, Routes, Navigate, Outlet } from 'react-router-dom';
 
 const RequireAuth = () => {
-  let isAuth = true; //localStorage.getItem('access_token');
+  let isAuth = localStorage.getItem('access_token');
 
   if(!isAuth) {
     return <Navigate to='/'/>

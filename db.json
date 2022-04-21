@@ -26,14 +26,38 @@
       "time": "4/19/2020",
       "message": "Bongkar pasang AC",
       "id": 3
+    },
+    {
+      "full_name": "Bismillah",
+      "email": "Bismillah",
+      "address": "Bismillah",
+      "phone_number": "Bismillah",
+      "time": "Bismillah",
+      "message": "Bismillah",
+      "id": 9
+    },
+    {
+      "full_name": "Bismillah",
+      "email": "Bismillah",
+      "address": "Bismillah",
+      "phone_number": "Bismillah",
+      "time": "Bismillah",
+      "message": "Bismillah",
+      "id": 10
     }
   ],
   "users": [
     {
-      "username":"Rifqy",
-      "email":"2ndrifqy@gmail.com",
-      "password":"4321S1234lol",
-      "id":1
+      "username": "Rifqy",
+      "email": "2ndrifqy@gmail.com",
+      "password": "4321S1234lol",
+      "id": 1
+    },
+    {
+      "email": "test@mail.com",
+      "password": "$2a$10$.x750u8h9Fh3z3pnATedpur9TmM.EVmcYQV/G75OUmqDO.L8ucndC",
+      "username": "Test",
+      "id": 2
     }
   ]
 }

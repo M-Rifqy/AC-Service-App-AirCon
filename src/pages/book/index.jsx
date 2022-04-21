@@ -1,70 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation3 from '../../components/navbar3';
 import Footer from '../../components/footer';
 import { Form, Button, FloatingLabel } from 'react-bootstrap';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
 import axios from 'axios';
 import './style.scss';
 
 
 export default function Book() {
 
+  const initialFormValue = {
+    full_name: '',
+    email: '',
+    address: '',
+    phone_number: '',
+    time: '',
+    message: ''
+  }
+
+  const [form,setForm] = useState(initialFormValue);
+
     const handleBook = async () => {
-      const data = formik.values
 
       await axios
-      .post('http://localhost:8080/orders', data)
-      .then(() => {
+      .post('http://localhost:8080/orders', form)
+      .then((res) => {
         alert('Your request has been sent');
       })
       .catch((err) => {
-        alert('Your request has been sent');
+        alert('Error Message')
         console.error(err)
       })
-    }
+    };
 
-    const formik = useFormik({
-      initialValues: {
-        full_name: '',
-        email: '',
-        address: '',
-        phone_number: '',
-        time: '',
-        message: ''
-      },
-
-      validationSchema: Yup.object({
-        full_name: Yup.string()
-                     .required('[ ! ] Full name is required'),
-
-        email: Yup.string()
-                  .required('[ ! ] Email is required')
-                  .email('[ ! ] Invalid email format'),
-
-        address: Yup.string()
-                    .required('[ ! ] address is required'),          
-
-        phone_number: Yup.string()
-                         .required('[ ! ] Phone number is required'),
-
-        time: Yup.string()
-                 .required('[ ! ] Time is required'),
-
-        message: Yup.string()
-                    .required('[ ! ] Please tell us what do you need')
-      }),
-  
-      onSubmit: handleBook
-
-    });
-    console.log(formik);
+    const handleSubmit = (e) => {
+      e.preventDefault()
+      return handleBook()
+    };
 
     return ( 
       <>
       <Navigation3/>
       <div className='form-page'>
-        <Form className='form-container' onSubmit={formik.handleSubmit}>
+      <Form className='form-container' onSubmit={handleSubmit}>
           <h1 className='f-h1'>Request an Appointment</h1>
 
           <Form.Group>
@@ -77,11 +54,13 @@ export default function Book() {
                 type='text'
                 name='full_name'
                 placeholder='Full Name *'
-                {...formik.getFieldProps('full_name')}
+                onChange={(e) => setForm( prev => ({
+                  ...prev,
+                  full_name: e.target.value
+                }))
+                }
               />
             </FloatingLabel>
-
-            {formik.touched.full_name && formik.errors.full_name && <div className='f-error'>{formik.errors.full_name}</div>}
           </Form.Group>
 
           <Form.Group>
@@ -94,11 +73,13 @@ export default function Book() {
                 type='text'
                 name='email'
                 placeholder='Email *'
-                {...formik.getFieldProps('email')}
+                onChange={(e) => setForm( prev => ({
+                  ...prev,
+                  email: e.target.value
+                }))
+                }
               />
             </FloatingLabel>
-
-            {formik.touched.email && formik.errors.email && <div className='f-error'>{formik.errors.email}</div>}
           </Form.Group>
 
           <Form.Group>
@@ -111,11 +92,13 @@ export default function Book() {
                 type='text'
                 name='address'
                 placeholder='Address / Location *'
-                {...formik.getFieldProps('address')}
+                onChange={(e) => setForm( prev => ({
+                  ...prev,
+                  address: e.target.value
+                }))
+                }
               />
             </FloatingLabel>
-
-            {formik.touched.address && formik.errors.address && <div className='f-error'>{formik.errors.address}</div>}
           </Form.Group>
 
           <Form.Group>
@@ -128,11 +111,13 @@ export default function Book() {
                 type='text'
                 name='phone_number'
                 placeholder='Phone Number *'
-                {...formik.getFieldProps('phone_number')}
+                onChange={(e) => setForm( prev => ({
+                  ...prev,
+                  phone_number: e.target.value
+                }))
+                }
               />
             </FloatingLabel>
-
-            {formik.touched.phone_number && formik.errors.phone_number && <div className='f-error'>{formik.errors.phone_number}</div>}
           </Form.Group>
 
           <Form.Group>
@@ -145,11 +130,13 @@ export default function Book() {
                 type='text'
                 name='time'
                 placeholder='Time *'
-                {...formik.getFieldProps('time')}
+                onChange={(e) => setForm( prev => ({
+                  ...prev,
+                  time: e.target.value
+                }))
+                }
               />
             </FloatingLabel>
-
-            {formik.touched.time && formik.errors.time && <div className='f-error'>{formik.errors.time}</div>}
           </Form.Group>
 
           <Form.Group>
@@ -163,20 +150,21 @@ export default function Book() {
                 name='message'
                 placeholder='Message *'
                 style={{ height:'100px'}}
-                {...formik.getFieldProps('message')}
+                onChange={(e) => setForm( prev => ({
+                  ...prev,
+                  message: e.target.value
+                }))
+                }
               />
             </FloatingLabel>
-
-            {formik.touched.message && formik.errors.message && <div className='f-error'>{formik.errors.message}</div>}
           </Form.Group>
 
-          <Button className='f-btn' type="submit" disabled={formik.isSubmitting}>Send</Button>
+          <Button className='f-btn' type="submit">Send</Button>
           <p className='f-p'>
             Or Contact Us Directly{' '}
             <a href='/contact'>Here</a>
           </p>
         </Form>
-
       </div>
       <Footer/>
       </>

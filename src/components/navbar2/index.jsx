@@ -5,6 +5,12 @@ import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 
 export default function Navigation2() {
+
+   const handleLogout = () => {
+     localStorage.removeItem('access_token');
+     window.location.reload();
+   }
+
     return (
     <>
   <Navbar className='navbar-2' collapseOnSelect expand="md" fixed='top'>
@@ -25,8 +31,11 @@ export default function Navigation2() {
           <Nav.Link as={Link} className='navItem-2 text-center' to="/contact">CONTACT</Nav.Link>
         </Nav>
         <Nav className='btn-kontener-2'>
-        <Button as={Link} to='/book' className='book-btn-2 mx-3'>BOOK NOW</Button>
-        <Button as={Link} to='/login' className='login-btn-2'>Account</Button>
+        <Button as={Link} to='/book' className='book-btn-2 mx-1'>BOOK NOW</Button>
+        {localStorage.getItem("access_token") ? (
+          <Button className='logout-btn2' onClick={handleLogout}>Logout</Button> ) : (
+          <Button as={Link} to='/login' className='login-btn-2'>Account</Button>
+          )}
         </Nav>
       </Navbar.Collapse>
     </Container>

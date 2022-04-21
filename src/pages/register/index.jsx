@@ -27,23 +27,6 @@ const validationSchema = yup.object().shape({
 
 export default function Register() {
 
-    const handleRegister = async () => {
-
-      const data = formik.values
-
-      await axios
-      .post('http://localhost:8080/register', data)
-      .then(res => {
-        localStorage.setItem('access_token', res.data.accessToken)
-        window.location = '/login'
-      })
-      .catch(err => {
-        localStorage.setItem('access_token', 'aaaaaaaa')
-        window.location = '/register'
-        console.error(err)
-      })
-    }
-
     const formik = useFormik({
       initialValues: {
         username: '',
@@ -51,10 +34,26 @@ export default function Register() {
         password: ''
       },
       validationSchema: validationSchema,
-      onSubmit: () => handleRegister
+      onSubmit: () => handleRegister()
 
     });
-    console.log(formik);
+
+    const handleRegister = async () => {
+
+      const { username, email, password } = formik.values
+
+      await axios
+      .post('http://localhost:8080/register', { username, email, password })
+      .then(() => {
+        window.location = '/login'
+      })
+      .catch(err => {
+        window.location = '/login'
+        console.error(err)
+      })
+    }
+
+    //console.log(formik);
 
     return ( 
       <>

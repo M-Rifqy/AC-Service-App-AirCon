@@ -63,6 +63,22 @@
       border: 1px solid #ffffffab !important;
       color: #ffffffab !important;
     }
+
+    .logout-btn {
+      padding: 5px 10px;
+      background-color: transparent !important;
+      border: 1px solid red !important;
+      font-family: 'play', sans-serif !important;
+      color: red  !important;
+      border-radius: 10px;
+      font-size: 16px !important;
+      box-shadow: none;
+    }
+
+    .logout-btn:hover {
+      border: 1px solid rgba(255, 0, 0, 0.669) !important;
+      color: rgba(255, 0, 0, 0.669) !important;
+    }
   
     .book-btn {
       padding: 5px 30px;

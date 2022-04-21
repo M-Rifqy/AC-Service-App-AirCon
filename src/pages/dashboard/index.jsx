@@ -3,21 +3,13 @@ import './style.scss';
 import Navigation2 from '../../components/navbar2';
 import Footer from '../../components/footer';
 import { Table, Button } from 'react-bootstrap';
-import { BiPencil, BiTrash } from 'react-icons/bi';
+import { BiTrash } from 'react-icons/bi';
 import axios from 'axios';
 
 export default function Dashboard() {
 
-  //const [header, setHeader] = useState([]);
+  const [header, setHeader] = useState([]);
   const [data, setData] = useState([]);
-  const [action, setAction] = useState(null); 
-  //const [modalVisible, setModalVisible] = useState(false); 
-  const [updateId, setUpdatedId] = useState(null);
-
-  const handleEdit = (id) => {
-    setUpdatedId(id);
-    setAction('edit');
-  }
 
   const handleDelete = async (id) => {
     await axios
@@ -39,6 +31,8 @@ export default function Dashboard() {
   }
 
   useEffect(() => {
+    const listHeader = ['No', 'Full Name', 'Email', 'Address', 'Phone Number', 'Time', 'Message', 'Action'];
+    setHeader(listHeader);
     getData()
   }, [])
 
@@ -51,14 +45,9 @@ export default function Dashboard() {
       <Table striped hover bordered variant="dark">
         <thead>
           <tr>
-            <td>No</td>
-            <td>Full Name</td>
-            <td>Email</td>
-            <td>Address</td>
-            <td>Phone Number</td>
-            <td>Time</td>
-            <td>Message</td>
-            <td>Action</td>
+            {header.map((v, idx) => (
+              <th key={idx}>{v}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
@@ -74,7 +63,6 @@ export default function Dashboard() {
               <td>{v.time}</td>
               <td>{v.message}</td>
               <td>
-                <Button className='edit-btn' onClick = {() => handleEdit(v.id)}><BiPencil/></Button><br/>
                 <Button className='delete-btn' onClick = {() => window.confirm("Are you sure?") ? handleDelete(v.id) : null}><BiTrash/></Button>
               </td>
             </tr>

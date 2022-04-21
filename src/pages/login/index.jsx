@@ -30,15 +30,13 @@ export default function Login() {
       await axios
         .post('http://localhost:8080/login', data)
         .then(res => {
-          localStorage.setItem('access_token', res.data.accessToken)
-          window.location = '/'
+            localStorage.setItem('access_token', res.data.accessToken);
+            window.location = '/';
         })
         .catch(err => {
-          localStorage.setItem('access_token', "aaaaaaaa")
-          window.location = "/"
-          console.err(err)
-        })
-    }
+          console.err(err);
+        });
+    };
 
     const formik = useFormik({
       initialValues: {
@@ -47,10 +45,10 @@ export default function Login() {
       },
 
       validationSchema: validationSchema,
-      onSubmit: () => handleLogin
+      onSubmit: () => handleLogin()
 
     });
-    console.log(formik);
+    //console.log(formik);
 
     return ( 
       <>
