@@ -20,27 +20,38 @@ const RequireAuth = () => {
   return <Outlet/>
 }
 
+const NoAuth = () => {
+  const isAuth = localStorage.getItem("access_token");
+
+  if (isAuth) {
+    return <Navigate to="/" />;
+  }
+
+  return <Outlet />;
+}
+
 export default function App() {
   return (
     <>
     <BrowserRouter>
       <div className="App">
         <Routes>
-          {/* Public Route */}
+
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/service' element={<Service/>}/>
           <Route path='/contact' element={<Contact/>}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/register' element={<Register/>}/>
 
-          {/* Protected Route */}
+          <Route element={<NoAuth/>}>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/register' element={<Register/>}/>
+          </Route>
+
           <Route element={<RequireAuth/>}>
             <Route path='/book' element={<Book/>}/>
             <Route path='/dashboard' element={<Dashboard/>}/>
           </Route>
           
-          {/* Not Found Page */}
           <Route path='*' element={<NotFound/>}/>
 
         </Routes>

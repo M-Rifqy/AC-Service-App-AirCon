@@ -31,7 +31,7 @@ export default function Navigation2() {
           <Nav.Link as={Link} className='navItem-2 text-center' to="/contact">CONTACT</Nav.Link>
         </Nav>
         <Nav className='btn-kontener-2'>
-        <Button as={Link} to='/book' className='book-btn-2 mx-1'>BOOK NOW</Button>
+        <Button as={Link} to='/book' className='book-btn-2 mx-2'>BOOK NOW</Button>
         {localStorage.getItem("access_token") ? (
           <Button className='logout-btn2' onClick={handleLogout}>Logout</Button> ) : (
           <Button as={Link} to='/login' className='login-btn-2'>Account</Button>
